@@ -1,0 +1,303 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Enforce a measure for all elements, with a few exceptions */
+* {
+  max-inline-size: var(--measure, 60ch);
+}
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+  max-inline-size: none;
+}
+/* Base styles */
+body {
+  font-family: var(--font-base);
+  color: var(--color-dark);
+  font-size: var(--step-0);
+  background: var(--bg-gradient);
+  padding: var(--space-xl) var(--space-l);
+
+  /* Center the content when there's a lot of screen real estate */
+  display: grid;
+}
+body > main {
+    margin-block: auto;
+  }
+/* Remove the left padding on ul elements with a list role */
+ul[role='list'] {
+  padding-left: 0;
+}
+/* Update focus-visible styles on all interactive elements */
+:focus-visible {
+  outline: 4px solid var(--color-primary);
+  outline-offset: 4px;
+}
+/* Reset margins */
+h1,
+ul {
+  margin: 0;
+}
+/* @link https://utopia.fyi/space/calculator?c=320,12,1.2,1440,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6|7,l-2xl&g=s,l,xl,12 */
+:root {
+  --space-3xs: clamp(0.19rem, calc(0.13rem + 0.27vw), 0.38rem);
+  --space-2xs: clamp(0.38rem, calc(0.27rem + 0.54vw), 0.75rem);
+  --space-xs: clamp(0.56rem, calc(0.4rem + 0.8vw), 1.13rem);
+  --space-s: clamp(0.75rem, calc(0.54rem + 1.07vw), 1.5rem);
+  --space-m: clamp(1.13rem, calc(0.8rem + 1.61vw), 2.25rem);
+  --space-l: clamp(1.5rem, calc(1.07rem + 2.14vw), 3rem);
+  --space-xl: clamp(2.25rem, calc(1.61rem + 3.21vw), 4.5rem);
+  --space-2xl: clamp(3rem, calc(2.14rem + 4.29vw), 6rem);
+  --space-3xl: clamp(4.5rem, calc(3.21rem + 6.43vw), 9rem);
+  --space-4xl: clamp(5.25rem, calc(3.75rem + 7.5vw), 10.5rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.19rem, calc(0.03rem + 0.8vw), 0.75rem);
+  --space-2xs-xs: clamp(0.38rem, calc(0.16rem + 1.07vw), 1.13rem);
+  --space-xs-s: clamp(0.56rem, calc(0.29rem + 1.34vw), 1.5rem);
+  --space-s-m: clamp(0.75rem, calc(0.32rem + 2.14vw), 2.25rem);
+  --space-m-l: clamp(1.13rem, calc(0.59rem + 2.68vw), 3rem);
+  --space-l-xl: clamp(1.5rem, calc(0.64rem + 4.29vw), 4.5rem);
+  --space-xl-2xl: clamp(2.25rem, calc(1.18rem + 5.36vw), 6rem);
+  --space-2xl-3xl: clamp(3rem, calc(1.29rem + 8.57vw), 9rem);
+  --space-3xl-4xl: clamp(4.5rem, calc(2.79rem + 8.57vw), 10.5rem);
+
+  /* Custom pairs */
+  --space-l-2xl: clamp(1.5rem, calc(0.21rem + 6.43vw), 6rem);
+}
+/* @link https://utopia.fyi/type/calculator?c=320,12,1.2,1440,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+:root {
+  --step--2: clamp(0.52rem, calc(0.44rem + 0.4vw), 0.8rem);
+  --step--1: clamp(0.63rem, calc(0.52rem + 0.54vw), 1rem);
+  --step-0: clamp(0.75rem, calc(0.61rem + 0.71vw), 1.25rem);
+  --step-1: clamp(0.9rem, calc(0.71rem + 0.95vw), 1.56rem);
+  --step-2: clamp(1.08rem, calc(0.83rem + 1.25vw), 1.95rem);
+  --step-3: clamp(1.3rem, calc(0.97rem + 1.64vw), 2.44rem);
+  --step-4: clamp(1.56rem, calc(1.13rem + 2.14vw), 3.05rem);
+  --step-5: clamp(1.87rem, calc(1.31rem + 2.78vw), 3.82rem);
+}
+:root {
+  --color-dark: hsl(238 29% 16%);
+  --color-dark-glare: hsl(237 12% 33%);
+  --color-light: hsl(240 5% 91%);
+  --color-light-shade: hsl(240 6% 50%);
+  --color-light-glare: hsl(0 0% 100%);
+  --color-primary: hsl(14 88% 65%);
+  --color-secondary: hsl(240 73% 65%);
+  --color-tertiary: hsl(273 75% 66%);
+
+  --text-body: 12px;
+  --font-base: 'Kumbh Sans', sans-serif;
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  --measure: 60ch;
+
+  --bg-gradient: linear-gradient(
+    0deg,
+    hsl(240deg 73% 65%) 0%,
+    hsl(251deg 74% 65%) 39%,
+    hsl(262deg 74% 65%) 61%,
+    hsl(273deg 75% 66%) 100%
+  );
+}
+/* Flow CSS Utility */
+/* Info: https://piccalil.li/quick-tip/flow-utility/ */
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+.accordion {
+  --border-color: var(--color-light);
+  --padding: var(--space-s);
+
+  /* Add top and bottom borders */
+  border-top: 1px solid var(--border-color);
+}
+.accordion:last-child {
+    border-bottom: 1px solid var(--border-color);
+  }
+.accordion-header {
+    font-size: var(--step-1);
+    font-weight: var(--weight-regular);
+    line-height: 1.2;
+  }
+.accordion-header-button {
+      color: var(--color-dark-glare);
+      border: none;
+      width: 100%;
+      padding-block: var(--padding);
+      background: none;
+      text-align: left;
+      padding-inline: 0;
+    }
+.accordion-header-button[aria-expanded='true'] {
+        font-weight: var(--weight-bold);
+        color: var(--color-dark);
+      }
+.accordion-header-button:hover {
+        color: var(--color-primary);
+        cursor: pointer;
+      }
+.accordion-panel {
+    padding-bottom: var(--padding);
+    color: var(--color-light-shade);
+  }
+.faq {
+  background: var(--color-light-glare);
+  padding: var(--space-xl-2xl) var(--space-l-2xl);
+  max-width: 60em;
+  margin-inline: auto;
+  border-radius: 2em;
+
+  /* Set position to relative for the hero image */
+  position: relative;
+
+  /* Add hefty top margin to prevent the hero image from getting cut */
+  margin-top: 15vmax;
+}
+/* Keep the stack centered if container gets wider than the measure  */
+.faq-content ul {
+    margin-inline: auto;
+  }
+/* Center heading */
+.faq h1 {
+    text-align: center;
+
+    /* Add hefty spacing at the top to offset the absolute-positioned image */
+    margin-block: var(--space-3xl) var(--space-l);
+  }
+.faq-image {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -60%);
+    width: min(20em, 70%);
+  }
+.faq-image::after {
+      content: '';
+      background-image: url('../images/bg-pattern-mobile.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 20%;
+      z-index: -1;
+    }
+@media (min-width: 60em) {
+.faq {
+    /* Switch to two-column layout */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+
+    /* Hide overflow from the larger image */
+    overflow: hidden
+
+    /* Remove the extra top margin */
+
+    /* Left-align the heading */
+
+    /* Content should flush right */
+
+    /* Image will be repositioned to the left of container */
+}
+    .faq,
+    .faq h1 {
+      margin-top: 0;
+    }
+    .faq h1 {
+      text-align: left;
+    }
+    .faq-content {
+      grid-column: 2 / 3;
+    }
+    .faq-image {
+      left: 0;
+      top: 50%;
+      transform: translate(-20%, -50%);
+      width: auto;
+    }
+
+      /* Make the image bigger */
+      .faq-image img {
+        width: 32em;
+      }
+
+      .faq-image::after {
+        background-image: url('../images/bg-pattern-desktop.svg');
+        /* Keep right at 0 */
+        right: 0;
+        /* Edit these values to adjust the size of the bg pattern */
+        width: 200%;
+        height: 260%;
+        top: -101%;
+      }
+  }
