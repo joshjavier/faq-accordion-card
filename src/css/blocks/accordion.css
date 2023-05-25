@@ -1,0 +1,41 @@
+.accordion {
+  --border-color: var(--color-light);
+  --padding: var(--space-s);
+
+  /* Add top and bottom borders */
+  border-top: 1px solid var(--border-color);
+  &:last-child {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  &-header {
+    font-size: var(--step-1);
+    font-weight: var(--weight-regular);
+    line-height: 1.2;
+
+    &-button {
+      color: var(--color-dark-glare);
+      border: none;
+      width: 100%;
+      padding-block: var(--padding);
+      background: none;
+      text-align: left;
+      padding-inline: 0;
+
+      &[aria-expanded='true'] {
+        font-weight: var(--weight-bold);
+        color: var(--color-dark);
+      }
+
+      &:hover {
+        color: var(--color-primary);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-panel {
+    padding-bottom: var(--padding);
+    color: var(--color-light-shade);
+  }
+}

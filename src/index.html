@@ -1,0 +1,66 @@
+---
+faq:
+  - question: 'How many team members can I invite?'
+    answer: 'You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.'
+  - question: 'What is the maximum file upload size?'
+    answer: 'No more than 2GB. All files in your account must fit your allotted storage space.'
+  - question: 'How do I reset my password?'
+    answer: 'Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.'
+  - question: 'Can I cancel my subscription?'
+    answer: 'Yes! Send us a message and we’ll process your request no questions asked.'
+  - question: 'Do you provide additional support?'
+    answer: 'Chat and email support is available 24/7. Phone lines are open during normal business hours.'
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>FAQ Accordion Card | A Frontend Mentor Challenge</title>
+    <meta
+      name="description"
+      content="A solution to Frontend Mentor's FAQ Accordion Card challenge"
+    />
+
+    <link rel="stylesheet" href="css/global.css">
+    <script src="index.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <div class="faq">
+        <div class="faq-image">
+          <picture>
+            <source media="(min-width: 60em)" srcset="images/illustration-woman-online-desktop.svg">
+            <img src="images/illustration-woman-online-mobile.svg" alt="" />
+          </picture>
+        </div>
+
+        <div class="faq-content">
+          <h1>FAQ</h1>
+
+          <ul role="list">
+            {% for item in faq -%}
+              {% set question = item.question -%}
+              {% set answer = item.answer -%}
+              {% set buttonId = 'b' + loop.index -%}
+              {% set panelId = 'p' + loop.index -%}
+              {% include "accordion.njk" -%}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

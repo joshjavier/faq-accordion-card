@@ -1,0 +1,25 @@
+:root {
+  --color-dark: hsl(238 29% 16%);
+  --color-dark-glare: hsl(237 12% 33%);
+  --color-light: hsl(240 5% 91%);
+  --color-light-shade: hsl(240 6% 50%);
+  --color-light-glare: hsl(0 0% 100%);
+  --color-primary: hsl(14 88% 65%);
+  --color-secondary: hsl(240 73% 65%);
+  --color-tertiary: hsl(273 75% 66%);
+
+  --text-body: 12px;
+  --font-base: 'Kumbh Sans', sans-serif;
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  --measure: 60ch;
+
+  --bg-gradient: linear-gradient(
+    0deg,
+    hsl(240deg 73% 65%) 0%,
+    hsl(251deg 74% 65%) 39%,
+    hsl(262deg 74% 65%) 61%,
+    hsl(273deg 75% 66%) 100%
+  );
+}

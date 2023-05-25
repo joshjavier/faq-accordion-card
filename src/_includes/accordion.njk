@@ -1,0 +1,16 @@
+<li class="accordion">
+  <h2 class="accordion-header">
+    <button id="{{ buttonId }}"
+            aria-expanded="true"
+            aria-controls="{{ panelId }}"
+            class="accordion-header-button">
+      {{- question -}}
+    </button>
+  </h2>
+  <div id="{{ panelId }}"
+       role="region"
+       aria-labelledby="{{ buttonId }}"
+       class="accordion-panel">
+    {{- answer -}}
+  </div>
+</li>
