@@ -44,3 +44,9 @@ h1,
 ul {
   margin: 0;
 }
+
+/* Set heading styles */
+h1 {
+  font-size: var(--step-4);
+  font-weight: var(--weight-bold);
+}
