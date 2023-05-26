@@ -52,5 +52,6 @@ toggleButtons.forEach((button) => {
 /**
  * Accordion panels are initially collapsed when JavaScript is enabled.
  * Otherwise, they will not be hidden for users without JavaScript.
+ * Leave the 2nd accordion initially expanded as shown in the design.
  */
-collapseAll(accordions)
+collapseAll([...accordions].filter((_, index) => index !== 1))

@@ -104,7 +104,12 @@ h1,
 ul {
   margin: 0;
 }
-/* @link https://utopia.fyi/space/calculator?c=320,12,1.2,1440,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6|7,l-2xl&g=s,l,xl,12 */
+/* Set heading styles */
+h1 {
+  font-size: var(--step-4);
+  font-weight: var(--weight-bold);
+}
+/* @link https://utopia.fyi/space/calculator?c=320,12,1.2,1440,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6|7,l-2xl|3xs-s&g=s,l,xl,12 */
 :root {
   --space-3xs: clamp(0.19rem, calc(0.13rem + 0.27vw), 0.38rem);
   --space-2xs: clamp(0.38rem, calc(0.27rem + 0.54vw), 0.75rem);
@@ -130,17 +135,18 @@ ul {
 
   /* Custom pairs */
   --space-l-2xl: clamp(1.5rem, calc(0.21rem + 6.43vw), 6rem);
+  --space-3xs-s: clamp(0.19rem, calc(-0.19rem + 1.88vw), 1.5rem);
 }
-/* @link https://utopia.fyi/type/calculator?c=320,12,1.2,1440,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* @link https://utopia.fyi/type/calculator?c=320,12,1.2,1440,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 :root {
-  --step--2: clamp(0.52rem, calc(0.44rem + 0.4vw), 0.8rem);
-  --step--1: clamp(0.63rem, calc(0.52rem + 0.54vw), 1rem);
-  --step-0: clamp(0.75rem, calc(0.61rem + 0.71vw), 1.25rem);
-  --step-1: clamp(0.9rem, calc(0.71rem + 0.95vw), 1.56rem);
-  --step-2: clamp(1.08rem, calc(0.83rem + 1.25vw), 1.95rem);
-  --step-3: clamp(1.3rem, calc(0.97rem + 1.64vw), 2.44rem);
-  --step-4: clamp(1.56rem, calc(1.13rem + 2.14vw), 3.05rem);
-  --step-5: clamp(1.87rem, calc(1.31rem + 2.78vw), 3.82rem);
+  --step--2: clamp(0.52rem, calc(0.46rem + 0.28vw), 0.72rem);
+  --step--1: clamp(0.63rem, calc(0.55rem + 0.39vw), 0.9rem);
+  --step-0: clamp(0.75rem, calc(0.64rem + 0.54vw), 1.13rem);
+  --step-1: clamp(0.9rem, calc(0.76rem + 0.72vw), 1.41rem);
+  --step-2: clamp(1.08rem, calc(0.89rem + 0.97vw), 1.76rem);
+  --step-3: clamp(1.3rem, calc(1.04rem + 1.29vw), 2.2rem);
+  --step-4: clamp(1.56rem, calc(1.21rem + 1.7vw), 2.75rem);
+  --step-5: clamp(1.87rem, calc(1.42rem + 2.24vw), 3.43rem);
 }
 :root {
   --color-dark: hsl(238 29% 16%);
@@ -166,6 +172,23 @@ ul {
     hsl(262deg 74% 65%) 61%,
     hsl(273deg 75% 66%) 100%
   );
+
+  --shadow-color: 240deg 56% 40%;
+  --shadow-elevation-low: 0px 0.4px 0.5px hsl(var(--shadow-color) / 0.34),
+    0px 0.7px 0.8px -1.2px hsl(var(--shadow-color) / 0.34),
+    0px 1.8px 2px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-medium: 0px 0.4px 0.5px hsl(var(--shadow-color) / 0.36),
+    0px 1.5px 1.7px -0.8px hsl(var(--shadow-color) / 0.36),
+    0px 3.7px 4.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    0px 8.9px 10px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-high: 0px 0.4px 0.5px hsl(var(--shadow-color) / 0.34),
+    0px 2.6px 2.9px -0.4px hsl(var(--shadow-color) / 0.34),
+    0px 4.9px 5.5px -0.7px hsl(var(--shadow-color) / 0.34),
+    0px 8px 9px -1.1px hsl(var(--shadow-color) / 0.34),
+    -0.1px 12.8px 14.4px -1.4px hsl(var(--shadow-color) / 0.34),
+    -0.1px 20px 22.5px -1.8px hsl(var(--shadow-color) / 0.34),
+    -0.1px 30.3px 34.1px -2.1px hsl(var(--shadow-color) / 0.34),
+    -0.2px 44.7px 50.3px -2.5px hsl(var(--shadow-color) / 0.34);
 }
 /* Flow CSS Utility */
 /* Info: https://piccalil.li/quick-tip/flow-utility/ */
@@ -195,11 +218,27 @@ ul {
       background: none;
       text-align: left;
       padding-inline: 0;
+      display: flex;
+      gap: 1em;
     }
+/* Clicks should always register on the button, not on child elements */
+.accordion-header-button > * {
+        pointer-events: none;
+      }
+.accordion-header-button img {
+        width: 0.7em;
+        height: 100%;
+        margin-block: auto;
+        margin-inline: auto var(--space-3xs-s);
+        transition: 200ms;
+      }
 .accordion-header-button[aria-expanded='true'] {
         font-weight: var(--weight-bold);
         color: var(--color-dark);
       }
+.accordion-header-button[aria-expanded='true'] img {
+          transform: rotateX(180deg);
+        }
 .accordion-header-button:hover {
         color: var(--color-primary);
         cursor: pointer;
@@ -211,11 +250,12 @@ ul {
 .faq {
   background: var(--color-light-glare);
   padding: var(--space-xl-2xl) var(--space-l-2xl);
-  max-width: 60em;
+  max-width: 70em;
   margin-inline: auto;
   border-radius: 2em;
+  box-shadow: var(--shadow-elevation-high);
 
-  /* Set position to relative for the hero image */
+  /* Serve as anchor for the hero image */
   position: relative;
 
   /* Add hefty top margin to prevent the hero image from getting cut */
@@ -255,11 +295,12 @@ ul {
 .faq {
     /* Switch to two-column layout */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: var(--space-l-2xl) 1fr 1fr var(--space-l-2xl);
+    grid-template-rows: var(--space-xl-2xl) 1fr var(--space-xl-2xl);
     gap: 1em;
 
-    /* Hide overflow from the larger image */
-    overflow: hidden
+    /* Paddings will be expressed in grids, for easier positioning of elements to the edge of the card */
+    padding: 0
 
     /* Remove the extra top margin */
 
@@ -267,7 +308,7 @@ ul {
 
     /* Content should flush right */
 
-    /* Image will be repositioned to the left of container */
+    /* Image container will be repositioned to follow the grid layout */
 }
     .faq,
     .faq h1 {
@@ -277,27 +318,52 @@ ul {
       text-align: left;
     }
     .faq-content {
-      grid-column: 2 / 3;
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
     }
     .faq-image {
-      left: 0;
-      top: 50%;
-      transform: translate(-20%, -50%);
-      width: auto;
-    }
+      grid-column: 1 / 3;
+      grid-row: 1 / 4;
+      width: unset;
+      position: unset;
+      transform: unset;
 
-      /* Make the image bigger */
+      /* Center the image vertically in the card */
+      display: flex;
+    }
+      .faq-image picture {
+        margin-block: auto;
+      }
+      .faq-image {
+      overflow: hidden;
+  }
+
+      /* Trim parts of images that extend beyond the card */
+
+      /* Make the image bigger and position it just beyond the left edge */
       .faq-image img {
         width: 32em;
+        transform: translateX(-5em);
       }
 
+      /* Remove the shadow pseudo-element and express it as a background of .faq-image */
       .faq-image::after {
-        background-image: url('../images/bg-pattern-desktop.svg');
-        /* Keep right at 0 */
-        right: 0;
-        /* Edit these values to adjust the size of the bg pattern */
-        width: 200%;
-        height: 260%;
-        top: -101%;
+        content: none;
+      }
+      .faq-image {
+      background-image: url('../images/bg-pattern-desktop.svg');
+      background-repeat: no-repeat;
+      background-position: top 67% right 7.3em;
+      background-size: 240%;
+  }
+
+      /* Add the floating box just beyond the left edge of the card */
+      .faq-image::before {
+        content: url('../images/illustration-box-desktop.svg');
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -25%);
+        z-index: 10;
       }
   }
