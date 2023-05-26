@@ -109,44 +109,44 @@ h1 {
   font-size: var(--step-4);
   font-weight: var(--weight-bold);
 }
-/* @link https://utopia.fyi/space/calculator?c=320,12,1.2,1440,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6|7,l-2xl|3xs-s&g=s,l,xl,12 */
+/* @link https://utopia.fyi/space/calculator?c=320,12,1.2,1000,16,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6|7,l-2xl|3xs-s&g=s,l,xl,12 */
 :root {
-  --space-3xs: clamp(0.19rem, calc(0.13rem + 0.27vw), 0.38rem);
-  --space-2xs: clamp(0.38rem, calc(0.27rem + 0.54vw), 0.75rem);
-  --space-xs: clamp(0.56rem, calc(0.4rem + 0.8vw), 1.13rem);
-  --space-s: clamp(0.75rem, calc(0.54rem + 1.07vw), 1.5rem);
-  --space-m: clamp(1.13rem, calc(0.8rem + 1.61vw), 2.25rem);
-  --space-l: clamp(1.5rem, calc(1.07rem + 2.14vw), 3rem);
-  --space-xl: clamp(2.25rem, calc(1.61rem + 3.21vw), 4.5rem);
-  --space-2xl: clamp(3rem, calc(2.14rem + 4.29vw), 6rem);
-  --space-3xl: clamp(4.5rem, calc(3.21rem + 6.43vw), 9rem);
-  --space-4xl: clamp(5.25rem, calc(3.75rem + 7.5vw), 10.5rem);
+  --space-3xs: clamp(0.19rem, calc(0.16rem + 0.15vw), 0.25rem);
+  --space-2xs: clamp(0.38rem, calc(0.32rem + 0.29vw), 0.5rem);
+  --space-xs: clamp(0.56rem, calc(0.47rem + 0.44vw), 0.75rem);
+  --space-s: clamp(0.75rem, calc(0.63rem + 0.59vw), 1rem);
+  --space-m: clamp(1.13rem, calc(0.95rem + 0.88vw), 1.5rem);
+  --space-l: clamp(1.5rem, calc(1.26rem + 1.18vw), 2rem);
+  --space-xl: clamp(2.25rem, calc(1.9rem + 1.76vw), 3rem);
+  --space-2xl: clamp(3rem, calc(2.53rem + 2.35vw), 4rem);
+  --space-3xl: clamp(4.5rem, calc(3.79rem + 3.53vw), 6rem);
+  --space-4xl: clamp(5.25rem, calc(4.43rem + 4.12vw), 7rem);
 
   /* One-up pairs */
-  --space-3xs-2xs: clamp(0.19rem, calc(0.03rem + 0.8vw), 0.75rem);
-  --space-2xs-xs: clamp(0.38rem, calc(0.16rem + 1.07vw), 1.13rem);
-  --space-xs-s: clamp(0.56rem, calc(0.29rem + 1.34vw), 1.5rem);
-  --space-s-m: clamp(0.75rem, calc(0.32rem + 2.14vw), 2.25rem);
-  --space-m-l: clamp(1.13rem, calc(0.59rem + 2.68vw), 3rem);
-  --space-l-xl: clamp(1.5rem, calc(0.64rem + 4.29vw), 4.5rem);
-  --space-xl-2xl: clamp(2.25rem, calc(1.18rem + 5.36vw), 6rem);
-  --space-2xl-3xl: clamp(3rem, calc(1.29rem + 8.57vw), 9rem);
-  --space-3xl-4xl: clamp(4.5rem, calc(2.79rem + 8.57vw), 10.5rem);
+  --space-3xs-2xs: clamp(0.19rem, calc(0.04rem + 0.74vw), 0.5rem);
+  --space-2xs-xs: clamp(0.38rem, calc(0.2rem + 0.88vw), 0.75rem);
+  --space-xs-s: clamp(0.56rem, calc(0.36rem + 1.03vw), 1rem);
+  --space-s-m: clamp(0.75rem, calc(0.4rem + 1.76vw), 1.5rem);
+  --space-m-l: clamp(1.13rem, calc(0.71rem + 2.06vw), 2rem);
+  --space-l-xl: clamp(1.5rem, calc(0.79rem + 3.53vw), 3rem);
+  --space-xl-2xl: clamp(2.25rem, calc(1.43rem + 4.12vw), 4rem);
+  --space-2xl-3xl: clamp(3rem, calc(1.59rem + 7.06vw), 6rem);
+  --space-3xl-4xl: clamp(4.5rem, calc(3.32rem + 5.88vw), 7rem);
 
   /* Custom pairs */
-  --space-l-2xl: clamp(1.5rem, calc(0.21rem + 6.43vw), 6rem);
-  --space-3xs-s: clamp(0.19rem, calc(-0.19rem + 1.88vw), 1.5rem);
+  --space-l-2xl: clamp(1.5rem, calc(0.32rem + 5.88vw), 4rem);
+  --space-3xs-s: clamp(0.19rem, calc(-0.19rem + 1.91vw), 1rem);
 }
-/* @link https://utopia.fyi/type/calculator?c=320,12,1.2,1440,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* @link https://utopia.fyi/type/calculator?c=320,12,1.2,1000,16,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 :root {
-  --step--2: clamp(0.52rem, calc(0.46rem + 0.28vw), 0.72rem);
-  --step--1: clamp(0.63rem, calc(0.55rem + 0.39vw), 0.9rem);
-  --step-0: clamp(0.75rem, calc(0.64rem + 0.54vw), 1.13rem);
-  --step-1: clamp(0.9rem, calc(0.76rem + 0.72vw), 1.41rem);
-  --step-2: clamp(1.08rem, calc(0.89rem + 0.97vw), 1.76rem);
-  --step-3: clamp(1.3rem, calc(1.04rem + 1.29vw), 2.2rem);
-  --step-4: clamp(1.56rem, calc(1.21rem + 1.7vw), 2.75rem);
-  --step-5: clamp(1.87rem, calc(1.42rem + 2.24vw), 3.43rem);
+  --step--2: clamp(0.52rem, calc(0.46rem + 0.28vw), 0.64rem);
+  --step--1: clamp(0.63rem, calc(0.54rem + 0.41vw), 0.8rem);
+  --step-0: clamp(0.75rem, calc(0.63rem + 0.59vw), 1rem);
+  --step-1: clamp(0.9rem, calc(0.74rem + 0.82vw), 1.25rem);
+  --step-2: clamp(1.08rem, calc(0.85rem + 1.14vw), 1.56rem);
+  --step-3: clamp(1.3rem, calc(0.99rem + 1.55vw), 1.95rem);
+  --step-4: clamp(1.56rem, calc(1.14rem + 2.09vw), 2.44rem);
+  --step-5: clamp(1.87rem, calc(1.31rem + 2.79vw), 3.05rem);
 }
 :root {
   --color-dark: hsl(238 29% 16%);
@@ -297,7 +297,7 @@ h1 {
     display: grid;
     grid-template-columns: var(--space-l-2xl) 1fr 1fr var(--space-l-2xl);
     grid-template-rows: var(--space-xl-2xl) 1fr var(--space-xl-2xl);
-    gap: 1em;
+    column-gap: 1em;
 
     /* Paddings will be expressed in grids, for easier positioning of elements to the edge of the card */
     padding: 0
