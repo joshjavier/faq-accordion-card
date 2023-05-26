@@ -4,6 +4,7 @@
   max-width: 70em;
   margin-inline: auto;
   border-radius: 2em;
+  box-shadow: var(--shadow-elevation-high);
 
   /* Serve as anchor for the hero image */
   position: relative;
