@@ -21,10 +21,29 @@
       background: none;
       text-align: left;
       padding-inline: 0;
+      display: flex;
+      gap: 1em;
+
+      /* Clicks should always register on the button, not on child elements */
+      > * {
+        pointer-events: none;
+      }
+
+      img {
+        width: 0.7em;
+        height: 100%;
+        margin-block: auto;
+        margin-inline: auto var(--space-3xs-s);
+        transition: 200ms;
+      }
 
       &[aria-expanded='true'] {
         font-weight: var(--weight-bold);
         color: var(--color-dark);
+
+        img {
+          transform: rotateX(180deg);
+        }
       }
 
       &:hover {
