@@ -11,7 +11,7 @@
   <div id="{{ panelId }}"
        role="region"
        aria-labelledby="{{ buttonId }}"
-       class="accordion-panel">
-    {{- answer -}}
+       class="accordion-panel flow">
+    {{- answer | markdown | safe -}}
   </div>
 </li>
