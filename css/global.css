@@ -252,7 +252,7 @@ h1 {
     grid-template-rows: 0fr;
     transition: grid-template-rows 200ms;
   }
-.accordion-panel:not([hidden]) {
+.accordion-panel:not([aria-hidden='true']) {
       grid-template-rows: 1fr;
     }
 .accordion-panel-wrapper {
