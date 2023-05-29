@@ -54,7 +54,24 @@
   }
 
   &-panel {
-    padding-bottom: var(--padding);
     color: var(--color-light-shade);
+
+    /* Add simple animation to show/hide panels */
+    /* https://www.youtube.com/watch?v=B_n4YONte5A */
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 200ms;
+
+    &:not([hidden]) {
+      grid-template-rows: 1fr;
+    }
+
+    &-wrapper {
+      overflow: hidden;
+    }
+
+    p:last-child {
+      padding-bottom: var(--padding);
+    }
   }
 }

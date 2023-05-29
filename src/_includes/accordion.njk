@@ -12,6 +12,8 @@
        role="region"
        aria-labelledby="{{ buttonId }}"
        class="accordion-panel flow">
-    {{- answer | markdown | safe -}}
+    <div class="accordion-panel-wrapper">
+      {{- answer | markdown | safe -}}
+    </div>
   </div>
 </li>
