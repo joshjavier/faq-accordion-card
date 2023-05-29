@@ -9,7 +9,7 @@ function togglePanel() {
   const panel = document.getElementById(panelId)
 
   // Toggle aria-expanded on button and aria-hidden on panel
-  if (panel.getAttribute('hidden') !== 'true') {
+  if (panel.getAttribute('aria-hidden') === 'true') {
     panel.setAttribute('aria-hidden', 'false')
     this.setAttribute('aria-expanded', 'true')
   } else {
