@@ -5,12 +5,16 @@
             aria-controls="{{ panelId }}"
             class="accordion-header-button">
       <span>{{- question -}}</span>
-      <img src="images/icon-arrow-down.svg" alt="">
+      <img src="images/icon-arrow-down.svg"
+           alt=""
+           aria-hidden="true"
+           focusable="false">
     </button>
   </h2>
   <div id="{{ panelId }}"
        role="region"
        aria-labelledby="{{ buttonId }}"
+       aria-hidden="false"
        class="accordion-panel flow">
     <div class="accordion-panel-wrapper">
       {{- answer | markdown | safe -}}
