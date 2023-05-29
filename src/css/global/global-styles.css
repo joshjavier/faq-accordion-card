@@ -35,8 +35,8 @@ ul[role='list'] {
 
 /* Update focus-visible styles on all interactive elements */
 :focus-visible {
-  outline: 4px solid var(--color-primary);
-  outline-offset: 4px;
+  outline: 0.25em dotted var(--color-primary);
+  outline-offset: 1px;
 }
 
 /* Reset margins */
